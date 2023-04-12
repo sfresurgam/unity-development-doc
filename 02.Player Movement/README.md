@@ -4,21 +4,21 @@
 
 在Hierarchy窗口中的Scene上点击右键，选择GameObject创建一个空的素材Create Empty，并命名为Player
 
-![01.创建GameObject-Player](https://github.com/sfresurgam/unity-development-doc/blob/main/Unity2D%20Development%2002.Player%20Movement/source%20image/01.%E5%88%9B%E5%BB%BAGameObject-Player.png)
+![01.创建GameObject-Player](https://github.com/sfresurgam/unity-development-doc/tree/main/02.Player%20Movement/source%20image/01.%E5%88%9B%E5%BB%BAGameObject-Player.png)
 
 点击生成好的Player，在Inspector窗口中点击Add Component，为人物添加渲染器Sprite Rendener、碰撞体Rigidbody 2D
 
-![02.添加Component](https://github.com/sfresurgam/unity-development-doc/blob/main/Unity2D%20Development%2002.Player%20Movement/source%20image/02.%E6%B7%BB%E5%8A%A0Component.png)
+![02.添加Component](https://github.com/sfresurgam/unity-development-doc/tree/main/02.Player%20Movement/source%20image/02.%E6%B7%BB%E5%8A%A0Component.png)
 
 添加完成后的效果
 
-![03.SpriteRenderer And Rigidbody2D](https://github.com/sfresurgam/unity-development-doc/blob/main/Unity2D%20Development%2002.Player%20Movement/source%20image/03.SpriteRenderer%20And%20Rigidbody2D.png)
+![03.SpriteRenderer And Rigidbody2D](https://github.com/sfresurgam/unity-development-doc/tree/main/02.Player%20Movement/source%20image/03.SpriteRenderer%20And%20Rigidbody2D.png)
 
 将上一个章节中切割好的第一张精灵图player_0拖拽到Sprite Renderer的Sprite上
 
 将Rigidbody 2D中的Gravity Scale改为0，避免游戏启动后人物存在重力会坠落出屏幕
 
-![04.拖拽图片](https://github.com/sfresurgam/unity-development-doc/blob/main/Unity2D%20Development%2002.Player%20Movement/source%20image/04.%E6%8B%96%E6%8B%BD%E5%9B%BE%E7%89%87.png)
+![04.拖拽图片](https://github.com/sfresurgam/unity-development-doc/tree/main/02.Player%20Movement/source%20image/04.%E6%8B%96%E6%8B%BD%E5%9B%BE%E7%89%87.png)
 
 此时能看到中间的Scene窗口中出现了Player的图片，点击Game窗口也可以看到人物在窗口中的样子
 
@@ -26,7 +26,7 @@
 
 在Assets文件夹中新建文件夹Scripts，用于存放所有的C#脚本，新建Player.cs
 
-![05.创建脚本文件](https://github.com/sfresurgam/unity-development-doc/blob/main/Unity2D%20Development%2002.Player%20Movement/source%20image/05.%E5%88%9B%E5%BB%BA%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6.png)
+![05.创建脚本文件](https://github.com/sfresurgam/unity-development-doc/tree/main/02.Player%20Movement/source%20image/05.%E5%88%9B%E5%BB%BA%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6.png)
 
 双击打开Player.cs，下方会提供完整的代码
 
@@ -134,17 +134,17 @@ public class Player : MonoBehaviour
 
 将Player.cs脚本挂载到GameObject Player上
 
-![06.挂载脚本](https://github.com/sfresurgam/unity-development-doc/blob/main/Unity2D%20Development%2002.Player%20Movement/source%20image/06.%E6%8C%82%E8%BD%BD%E8%84%9A%E6%9C%AC.png)
+![06.挂载脚本](https://github.com/sfresurgam/unity-development-doc/tree/main/02.Player%20Movement/source%20image/06.%E6%8C%82%E8%BD%BD%E8%84%9A%E6%9C%AC.png)
 
 将Rigidbody 2d也挂载到刚生成的Player Component，修改Speed为5
 
-![07.挂载Rigidbody 2d](https://github.com/sfresurgam/unity-development-doc/blob/main/Unity2D%20Development%2002.Player%20Movement/source%20image/07.%E6%8C%82%E8%BD%BDRigidbody%202d.png)
+![07.挂载Rigidbody 2d](https://github.com/sfresurgam/unity-development-doc/tree/main/02.Player%20Movement/source%20image/07.%E6%8C%82%E8%BD%BDRigidbody%202d.png)
 
 ## 4.运行Unity控制人物移动
 
 点击屏幕上方中间的第一个三角按钮，进入测试界面
 
-![08.测试按钮](https://github.com/sfresurgam/unity-development-doc/blob/main/Unity2D%20Development%2002.Player%20Movement/source%20image/08.%E6%B5%8B%E8%AF%95%E6%8C%89%E9%92%AE.png)
+![08.测试按钮](https://github.com/sfresurgam/unity-development-doc/tree/main/02.Player%20Movement/source%20image/08.%E6%B5%8B%E8%AF%95%E6%8C%89%E9%92%AE.png)
 
 按下【W A S D】键或者方向键【上 下 左 右】，可以在窗口中看到人物成功进行了移动
 
