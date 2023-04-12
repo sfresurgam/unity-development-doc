@@ -4,11 +4,11 @@
 
 在Package Manager中搜索Cinemachine，点击Install进行安装
 
-![01.安装Cinemachine](F:\Unity\Unity Markdown File\Unity2D开发5\Picture\01.安装Cinemachine.png)
+![01.安装Cinemachine](https://github.com/sfresurgam/unity-development-doc/blob/main/05.CineMachine/source%20image/01.%E5%AE%89%E8%A3%85Cinemachine.png)
 
 然后在Persistent Scene窗口中右键添加【GameObjetc】-【CineMachine】-【2D Camera】，并修改名称为Cinemachine
 
-![02.添加2D Camera](F:\Unity\Unity Markdown File\Unity2D开发5\Picture\02.添加2D Camera.png)
+![02.添加2D Camera](https://github.com/sfresurgam/unity-development-doc/blob/main/05.CineMachine/source%20image/02.%E6%B7%BB%E5%8A%A02D%20Camera.png)
 
 ## 2.摄像机跟随与属性
 
@@ -16,11 +16,11 @@
 
 在Game窗口中可以看到摄像机的焦距比较大，将屏幕的分辨率修改为4K UHD（3840 X 2160），并将Cinemachine的Lens Ortho Size修改为9
 
-![03.摄像机设置](F:\Unity\Unity Markdown File\Unity2D开发5\Picture\03.摄像机设置.png)
+![03.摄像机设置](https://github.com/sfresurgam/unity-development-doc/blob/main/05.CineMachine/source%20image/03.%E6%91%84%E5%83%8F%E6%9C%BA%E8%AE%BE%E7%BD%AE.png)
 
 在CineMachine的Body属性中找到Dead Zone Width和Dead Zone Height，为它们赋值0.08，这样摄像机就有了缓冲区，在一定范围内移动时整个场景不会跟着移动
 
-![04.设置摄像机的缓冲区](F:\Unity\Unity Markdown File\Unity2D开发5\Picture\04.设置摄像机的缓冲区.png)
+![04.设置摄像机的缓冲区](https://github.com/sfresurgam/unity-development-doc/blob/main/05.CineMachine/source%20image/04.%E8%AE%BE%E7%BD%AE%E6%91%84%E5%83%8F%E6%9C%BA%E7%9A%84%E7%BC%93%E5%86%B2%E5%8C%BA.png)
 
 ## 3.设置摄像机边界
 
@@ -28,7 +28,7 @@
 
 注意：不要添加Cinemachine Confiner 2D，目前的游戏项目无论是2D还是3D都是添加Cinemachine Confiner
 
-![05.添加Confiner](F:\Unity\Unity Markdown File\Unity2D开发5\Picture\05.添加Confiner.png)
+![05.添加Confiner](https://github.com/sfresurgam/unity-development-doc/blob/main/05.CineMachine/source%20image/05.%E6%B7%BB%E5%8A%A0Confiner.png)
 
 可以看到在Bounding Shape 2D中需要一个Collider 2D，所以需要新建一个Polygon Collider 2D
 
@@ -36,7 +36,7 @@
 
 如果需要删除掉多余的线段，可以将鼠标移到需要移除的线条上，按住Ctrl+鼠标右键即可删除
 
-![06.添加PolygonCollider2D](F:\Unity\Unity Markdown File\Unity2D开发5\Picture\06.添加PolygonCollider2D.png)
+![06.添加PolygonCollider2D](https://github.com/sfresurgam/unity-development-doc/blob/main/05.CineMachine/source%20image/06.%E6%B7%BB%E5%8A%A0PolygonCollider2D.png)
 
 ## 4.摄像机绑定边界
 
@@ -44,7 +44,7 @@
 
 在【Assets】【Scripts】文件夹下创建文件夹【Utils】和脚本SwitchBoundsUtil.cs，将脚本挂载到Cinemachine摄像机上
 
-![07.添加脚本](F:\Unity\Unity Markdown File\Unity2D开发5\Picture\07.添加脚本.png)
+![07.添加脚本](https://github.com/sfresurgam/unity-development-doc/blob/main/05.CineMachine/source%20image/07.%E6%B7%BB%E5%8A%A0%E8%84%9A%E6%9C%AC.png)
 
 此时如果想要在运行的时候找到场景中的Polygon Collider 2D，可以使用常见的标签查找法
 
@@ -79,7 +79,7 @@ namespace Utils
 
 勾选Bounds的属性Is Trigger，将它设置为一个触发器解决该问题
 
-![08.游戏测试](F:\Unity\Unity Markdown File\Unity2D开发5\Picture\08.游戏测试.png)
+![08.游戏测试](https://github.com/sfresurgam/unity-development-doc/blob/main/05.CineMachine/source%20image/08.%E6%B8%B8%E6%88%8F%E6%B5%8B%E8%AF%95.png)
 
 可以发现人物走到地图边缘时，摄像机不再显示空白区域，而是停留在Polygon Collider 2D设置的检测区域内
 
