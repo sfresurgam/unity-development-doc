@@ -8,19 +8,19 @@
 
 将01.Courtyard设置为Unload，将02.House设置为Load
 
-![01.创建场景House](F:\Unity\Unity Markdown File\Unity2D开发9\Picture\01.创建场景House.png)
+![01.创建场景House](https://github.com/sfresurgam/unity-development-doc/blob/main/09.Scene%20Switch/source%20image/01.%E5%88%9B%E5%BB%BA%E5%9C%BA%E6%99%AFHouse.png)
 
 
 
 绘制好的室内场景如下
 
-![01.第二场景House](F:\Unity\Unity Markdown File\Unity2D开发9\Picture\01.第二场景House.png)
+![01.第二场景House](https://github.com/sfresurgam/unity-development-doc/blob/main/09.Scene%20Switch/source%20image/01.%E7%AC%AC%E4%BA%8C%E5%9C%BA%E6%99%AFHouse.png)
 
 ## 2.初始化脚本T Manager
 
 点击【File】-【Build Setting】-【Add Open Scenes】将场景全部添加进来
 
-![03.添加场景到Build Setting](F:\Unity\Unity Markdown File\Unity2D开发9\Picture\03.添加场景到Build Setting.png)
+![03.添加场景到Build Setting](https://github.com/sfresurgam/unity-development-doc/blob/main/09.Scene%20Switch/source%20image/03.%E6%B7%BB%E5%8A%A0%E5%9C%BA%E6%99%AF%E5%88%B0Build%20Setting.png)
 
 在Persistent Scene中创建空的GameObject命名为Transition Manager
 
@@ -59,9 +59,9 @@ namespace Transition
 
 比如我们将01.Courtyard和02.House都切换为Unload状态，然后设置startSceneName为01.Courtyard，点击Play运行游戏
 
-![04.unload场景](F:\Unity\Unity Markdown File\Unity2D开发9\Picture\04.unload场景.png)
+![04.unload场景](https://github.com/sfresurgam/unity-development-doc/blob/main/09.Scene%20Switch/source%20image/04.unload%E5%9C%BA%E6%99%AF.png)
 
-![05.测试加载场景](F:\Unity\Unity Markdown File\Unity2D开发9\Picture\05.测试加载场景.png)
+![05.测试加载场景](https://github.com/sfresurgam/unity-development-doc/blob/main/09.Scene%20Switch/source%20image/05.%E6%B5%8B%E8%AF%95%E5%8A%A0%E8%BD%BD%E5%9C%BA%E6%99%AF.png)
 
 可以看到游戏启动后成功加载了场景01.Courtyard
 
@@ -69,7 +69,7 @@ namespace Transition
 
 在场景House中添加【GameObject】并取名为PortalToCourtyard，意思是传送至场景Courtyard的通道，并为它添加碰撞器BoxCollider2D，放置在门口的位置，**注意要勾选Is Trigger**（图中忘记勾选了）
 
-![06.创建PortalToCourtyard](F:\Unity\Unity Markdown File\Unity2D开发9\Picture\06.创建PortalToCourtyard.png)
+![06.创建PortalToCourtyard](https://github.com/sfresurgam/unity-development-doc/blob/main/09.Scene%20Switch/source%20image/06.%E5%88%9B%E5%BB%BAPortalToCourtyard.png)
 
 创建脚本Portal.cs，挂载到PortalToCourtyard上
 
@@ -150,7 +150,7 @@ namespace Transition
 
 返回Unity，在PortalToCourtyard上修改传送地点和坐标（坐标设置为01.Courtyard的帐篷门口位置）
 
-![07.修改传送地点和坐标](F:\Unity\Unity Markdown File\Unity2D开发9\Picture\07.修改传送地点和坐标.png)
+![07.修改传送地点和坐标](https://github.com/sfresurgam/unity-development-doc/blob/main/09.Scene%20Switch/source%20image/07.%E4%BF%AE%E6%94%B9%E4%BC%A0%E9%80%81%E5%9C%B0%E7%82%B9%E5%92%8C%E5%9D%90%E6%A0%87.png)
 
 回到TransitionManager，添加传送事件的代码，注册到EventHandler上
 
@@ -353,11 +353,11 @@ private void OnPortalToPositionEvent(Vector3 pos)
 
 传送前
 
-![08.传送前](F:\Unity\Unity Markdown File\Unity2D开发9\Picture\08.传送前.png)
+![08.传送前](https://github.com/sfresurgam/unity-development-doc/blob/main/09.Scene%20Switch/source%20image/08.%E4%BC%A0%E9%80%81%E5%89%8D.png)
 
 传送后
 
-![09.传送后](F:\Unity\Unity Markdown File\Unity2D开发9\Picture\09.传送后.png)
+![09.传送后](https://github.com/sfresurgam/unity-development-doc/blob/main/09.Scene%20Switch/source%20image/09.%E4%BC%A0%E9%80%81%E5%90%8E.png)
 
 从Courtyard到House也同样按照这个流程来即可
 
